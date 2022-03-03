@@ -1,15 +1,15 @@
 import { BiAdjust, BiBarChartAlt2, BiCog, BiHelpCircle } from 'react-icons/bi';
 
-import styles from './Header.module.css';
+import './Header.css';
 
 const Header = () => {
   return (
-    <div className={styles.header}>
+    <div className="header">
       <div>
-        <button className={styles.button} title='How to play'>
+        <button className="header-button" title='How to play'>
           <BiHelpCircle />
         </button>
-        <button className={styles.button} title='Statistics'>
+        <button className="header-button" title='Statistics'>
           <BiBarChartAlt2 />
         </button>
       </div>
@@ -17,10 +17,10 @@ const Header = () => {
       <h1>Word App</h1>
 
       <div>
-        <button className={styles.button} title='Light/Dark'>
+        <button className="header-button" title='Light/Dark'>
           <BiAdjust />
         </button>
-        <button className={styles.button} title='Settings'>
+        <button className="header-button" title='Settings'>
           <BiCog />
         </button>
       </div>
