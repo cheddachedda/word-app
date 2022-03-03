@@ -1,0 +1,40 @@
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.keyboard-row {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.keyboard-button {
+  border-radius: 0.5rem;
+  background-color: var(--grey);
+  color: var(--white);
+  cursor: pointer;
+  flex-grow: 1;
+  font: inherit;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0.25rem;
+  padding: 1rem;
+}
+
+.big {
+  flex-grow: 2;
+}
+
+.incorrect {
+  background-color: var(--dark);
+}
+
+.nearly {
+  background-color: var(--yellow);
+}
+
+.correct {
+  background-color: var(--green);
+}
