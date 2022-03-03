@@ -1,0 +1,30 @@
+.board {
+  flex-direction: column;
+  padding: 6rem 12rem;
+  width: 100%;
+}
+
+.board-row {
+  display: flex;
+  flex-grow: 1;
+}
+
+.tile {
+  border: 1px solid var(--grey);
+  border-radius: 0.25rem;
+  color: var(--white);
+  flex-grow: 1;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.25rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.nearly {
+  background-color: var(--yellow);
+}
+
+.correct {
+  background-color: var(--green);
+}
