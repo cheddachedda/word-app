@@ -1,10 +1,10 @@
-import styles from './App.module.css';
+import './App.css';
 import Header from '../Header';
 import Board from '../Board';
 
 const App = () => {
   return (
-    <div className={styles.app}>
+    <div className="App">
       <Header />
       <Board />
     </div>

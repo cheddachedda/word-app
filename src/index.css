@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap'); */
 
 :root {
   --blue: #61dafb;
   --dark: #282c34;
   --white: #ffffff;
+  --grey: #656F7E;
 }
 
 * {
@@ -14,7 +15,8 @@
 
 body {
   background-color: var(--dark);
-  font-family: 'Fredoka', sans-serif;
+  font-family: monospace;
+  /* font-family: 'Fredoka', sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
