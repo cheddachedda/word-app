@@ -1,20 +1,28 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap'); */
 
 :root {
+  --background: #282c34;
   --blue: #61dafb;
-  --dark: #282c34;
+  --dark: #20252C;
   --white: #ffffff;
   --grey: #656F7E;
+  --yellow: #FABB05;
+  --green: #34A852;
 }
 
 * {
+	border: 0;
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
+	vertical-align: baseline;
 }
 
 body {
-  background-color: var(--dark);
+  background-color: var(--background);
+  margin: 0 auto;
+  min-height: 100vh;
+  max-width: 960px;
   font-family: monospace;
   /* font-family: 'Fredoka', sans-serif; */
   -webkit-font-smoothing: antialiased;
