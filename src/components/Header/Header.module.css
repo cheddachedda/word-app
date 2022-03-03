@@ -1,0 +1,27 @@
+.header {
+  align-items: center;
+  color: var(--blue);
+  display: flex;
+  max-width: 960px;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  flex-grow: 1;
+  font-size: 2.5rem;
+}
+
+.button {
+  background-color: var(--dark);
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 2.5rem;
+  padding: 0.25rem 0.25rem 0 0.25rem;
+}
+
+.button:hover, .button:active {
+  color: var(--blue);
+}
