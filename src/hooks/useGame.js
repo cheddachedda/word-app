@@ -21,7 +21,7 @@ export const GameProvider = ({ children }) => {
     let word = randomWord(wordLength);
 
     // randomWord() only takes a max length argument, so it could be shorter than the required length
-    while (answer.length !== wordLength && validateWord(answer)) {
+    while (word.length !== wordLength && validateWord(answer)) {
       word = randomWord(wordLength);
     }
 
