@@ -41,10 +41,15 @@ export const GameProvider = ({ children }) => {
     }
   };
 
+  const deleteLetter = () => {
+    setCurrentAttempt(() => currentAttempt.slice(0, -1));
+  };
+
   const values = {
     addLetter,
     answer,
     currentAttempt,
+    deleteLetter,
     maxAttempts,
     previousAttempts,
     wordLength
@@ -54,5 +59,5 @@ export const GameProvider = ({ children }) => {
     <GameContext.Provider value={values}>
       { children }
     </GameContext.Provider>
-  )
+  );
 };

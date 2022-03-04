@@ -4,7 +4,7 @@ import './Keyboard.css';
 import { useGame } from '../../hooks/useGame';
 
 const Button = ({ letter }) => {
-  const { addLetter, answer, previousAttempts } = useGame();
+  const { addLetter, answer, deleteLetter, previousAttempts } = useGame();
 
   let className = "keyboard-button";
   let label = letter.toUpperCase();
@@ -32,7 +32,7 @@ const Button = ({ letter }) => {
     if (key === 'Enter') {
       console.log('Pressed Enter');
     } else if (key === 'Backspace') {
-      console.log('Pressed Backspace');
+      deleteLetter();
     } else {
       addLetter(key);
     }
