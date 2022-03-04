@@ -8,6 +8,7 @@ export const useGame = () => useContext(GameContext);
 
 export const GameProvider = ({ children }) => {
   const [ answer, setAnswer ] = useState('');
+  const [ guessNo, setGuessNo ] = useState(0);
   const [ guesses, setGuesses ] = useState([]);
   const [ wordLength, setWordLength ] = useState(5);
   const [ maxGuesses, setMaxGuesses ] = useState(6);
@@ -34,7 +35,20 @@ export const GameProvider = ({ children }) => {
       .catch(() => false);
   };
 
+  const addLetter = (letter) => {
+    const newGuesses = guesses;
+
+    if (newGuesses[guessNo] && newGuesses[guessNo].length < wordLength) {
+      newGuesses[guessNo] += letter;
+    } else if (!newGuesses[guessNo]) {
+      newGuesses[guessNo] = letter;
+    }
+
+    setGuesses([ ...newGuesses ]);
+  };
+
   const values = {
+    addLetter,
     answer,
     guesses,
     maxGuesses,
