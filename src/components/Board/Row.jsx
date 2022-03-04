@@ -1,9 +1,10 @@
 import './Board.css';
 import Tile from './Tile';
-
-var wordLength = 5;
+import { useGame } from '../../hooks/useGame';
 
 const Row = ({ word }) => {
+  const { wordLength } = useGame();
+  
   let letters = word.split('');
   while (letters.length < wordLength) {
     letters.push('_');

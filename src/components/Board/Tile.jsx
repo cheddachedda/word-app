@@ -1,11 +1,12 @@
 import './Board.css';
-
-var solution = 'mourn';
+import { useGame } from '../../hooks/useGame';
 
 const Tile = ({ letter, index }) => {
+  const { answer } = useGame();
+
   let className = 'tile';
-  if (letter && solution.includes(letter)) className += ' nearly';
-  if (solution[index] === letter) className += ' correct';
+  if (letter && answer.includes(letter)) className += ' nearly';
+  if (answer[index] === letter) className += ' correct';
 
   return (
     <div className={className}>

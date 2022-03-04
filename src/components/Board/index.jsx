@@ -1,11 +1,9 @@
 import './Board.css';
 import Row from './Row';
-
-// Dummy data
-var guesses = [ 'slice', 'worth', 'round', 'mourn' ];
-var maxGuesses = 6;
+import { useGame } from '../../hooks/useGame';
 
 const Board = () => {
+  const { guesses, maxGuesses } = useGame();
   const emptyRows = Array(maxGuesses - guesses.length).fill('');
 
   return (

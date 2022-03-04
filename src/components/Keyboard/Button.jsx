@@ -1,19 +1,18 @@
 import { MdBackspace } from 'react-icons/md';
 
 import './Keyboard.css';
-
-// Dummy data:
-var guesses = [ 'slice', 'worth', 'round', 'mourn' ];
-var solution = 'mourn';
+import { useGame } from '../../hooks/useGame';
 
 const Button = ({ letter }) => {
+  const { answer, guesses } = useGame();
+
   let className = "keyboard-button";
   let label = letter.toUpperCase();
   
   if (guesses.join('').includes(letter)) {
-    if (guesses.some((word) => word.indexOf(letter) === solution.indexOf(letter) && word.indexOf(letter) >= 0)) {
+    if (guesses.some((word) => word.indexOf(letter) === answer.indexOf(letter) && word.indexOf(letter) >= 0)) {
       className += ' correct';
-    } else if (solution.includes(letter)) {
+    } else if (answer.includes(letter)) {
       className += ' nearly';
     } else {
       className += ' incorrect';
