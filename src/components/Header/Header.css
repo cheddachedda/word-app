@@ -9,7 +9,7 @@
 h1 {
   color: white;
   flex-grow: 1;
-  font-size: 4vh;
+  font-size: 6vw;
 }
 
 .header-button {
@@ -17,10 +17,20 @@ h1 {
   border: none;
   color: var(--white);
   cursor: pointer;
-  font-size: 4vh;
+  font-size: 8vw;
   padding: 0.25vh 1vh 0 1vh;
 }
 
 .header-button:hover, .header-button:active {
   color: var(--blue);
+}
+
+@media only screen and (min-width: 800px) {
+  h1 {
+    font-size: 4vh;
+  }
+
+  .header-button {
+    font-size: 4vh;
+  }
 }

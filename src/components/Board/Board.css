@@ -1,6 +1,6 @@
 .board {
-  flex-grow: 5;
-  padding: 2vh 0;
+  flex-grow: 3;
+  /* padding: 2vh 0; */
 }
 
 .board-row {
@@ -13,7 +13,7 @@
   border-radius: 0.25vh;
   color: var(--white);
   /* flex-grow: 1; */
-  font-size: 4vh;
+  font-size: 6vw;
   font-weight: bold;
   margin: 0.5vh;
   padding: 1.5vh;
@@ -28,4 +28,10 @@
 .correct {
   background-color: var(--green);
   border: 0.15vh solid var(--green);
+}
+
+@media only screen and (min-width: 800px) {
+  .tile {
+    font-size: 4vh;
+  }
 }
