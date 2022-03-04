@@ -21,8 +21,6 @@
 body {
   background-color: var(--background);
   margin: 0 auto;
-  min-height: 100vh;
-  max-width: 960px;
   font-family: monospace;
   /* font-family: 'Fredoka', sans-serif; */
   -webkit-font-smoothing: antialiased;

@@ -1,3 +1,4 @@
+import './App.css';
 import Header from './Header';
 import Board from './Board';
 import Keyboard from './Keyboard';

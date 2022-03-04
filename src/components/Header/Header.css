@@ -2,15 +2,14 @@
   align-items: center;
   color: var(--blue);
   display: flex;
-  max-width: 960px;
-  padding: 1rem;
+  padding: 2vh;
   text-align: center;
 }
 
 h1 {
   color: white;
   flex-grow: 1;
-  font-size: 2.5rem;
+  font-size: 4vh;
 }
 
 .header-button {
@@ -18,8 +17,8 @@ h1 {
   border: none;
   color: var(--white);
   cursor: pointer;
-  font-size: 2.5rem;
-  padding: 0.25rem 0.25rem 0 0.25rem;
+  font-size: 4vh;
+  padding: 0.25vh 1vh 0 1vh;
 }
 
 .header-button:hover, .header-button:active {

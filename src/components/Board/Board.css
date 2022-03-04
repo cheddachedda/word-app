@@ -1,30 +1,31 @@
 .board {
-  flex-direction: column;
-  padding: 6rem 12rem;
-  width: 100%;
+  flex-grow: 5;
+  padding: 2vh 0;
 }
 
 .board-row {
   display: flex;
-  flex-grow: 1;
+  justify-content: center;
 }
 
 .tile {
-  border: 1px solid var(--grey);
-  border-radius: 0.25rem;
+  border: 0.15vh solid var(--grey);
+  border-radius: 0.25vh;
   color: var(--white);
-  flex-grow: 1;
-  font-size: 2rem;
+  /* flex-grow: 1; */
+  font-size: 4vh;
   font-weight: bold;
-  margin: 0.25rem;
-  padding: 1rem;
+  margin: 0.5vh;
+  padding: 1.5vh;
   text-align: center;
 }
 
 .nearly {
   background-color: var(--yellow);
+  border: 0.15vh solid var(--yellow);
 }
 
 .correct {
   background-color: var(--green);
+  border: 0.15vh solid var(--green);
 }
