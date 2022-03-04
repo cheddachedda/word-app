@@ -2,7 +2,7 @@ import './Board.css';
 import Tile from './Tile';
 import { useGame } from '../../hooks/useGame';
 
-const Row = ({ word }) => {
+const Row = ({ word, current }) => {
   const { wordLength } = useGame();
   
   let letters = word.split('');
@@ -12,7 +12,7 @@ const Row = ({ word }) => {
 
   return (
     <div className="board-row">
-      { letters.map((letter, index) => <Tile key={index} letter={letter} index={index} /> )}
+      { letters.map((letter, index) => <Tile key={index} letter={letter} index={index} current /> )}
     </div>
   );
 };

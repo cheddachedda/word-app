@@ -3,12 +3,13 @@ import Row from './Row';
 import { useGame } from '../../hooks/useGame';
 
 const Board = () => {
-  const { attempts, maxAttempts } = useGame();
-  const emptyRows = Array(maxAttempts - attempts.length).fill('');
+  const { currentAttempt, maxAttempts, previousAttempts } = useGame();
+  const emptyRows = Array(maxAttempts - previousAttempts.length - 1).fill('');
 
   return (
     <div className="board">
-      { attempts.map((word, key) => <Row key={key} word={word} />)}
+      { previousAttempts.map((word, key) => <Row key={key} word={word} />)}
+      <Row word={currentAttempt} current />
       { emptyRows.map((word, key) => <Row key={key} word={word} />)}
     </div>
   );
