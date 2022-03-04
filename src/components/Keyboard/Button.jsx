@@ -4,13 +4,13 @@ import './Keyboard.css';
 import { useGame } from '../../hooks/useGame';
 
 const Button = ({ letter }) => {
-  const { addLetter, answer, guesses } = useGame();
+  const { addLetter, answer, attempts } = useGame();
 
   let className = "keyboard-button";
   let label = letter.toUpperCase();
   
-  if (guesses.join('').includes(letter)) {
-    if (guesses.some((word) => word.indexOf(letter) === answer.indexOf(letter) && word.indexOf(letter) >= 0)) {
+  if (attempts.join('').includes(letter)) {
+    if (attempts.some((word) => word.indexOf(letter) === answer.indexOf(letter) && word.indexOf(letter) >= 0)) {
       className += ' correct';
     } else if (answer.includes(letter)) {
       className += ' nearly';

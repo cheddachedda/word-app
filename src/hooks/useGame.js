@@ -8,10 +8,10 @@ export const useGame = () => useContext(GameContext);
 
 export const GameProvider = ({ children }) => {
   const [ answer, setAnswer ] = useState('');
-  const [ guessNo, setGuessNo ] = useState(0);
-  const [ guesses, setGuesses ] = useState([]);
+  const [ attemptNo, setAttemptNo ] = useState(0);
+  const [ attempts, setAttempts ] = useState([]);
   const [ wordLength, setWordLength ] = useState(5);
-  const [ maxGuesses, setMaxGuesses ] = useState(6);
+  const [ maxAttempts, setMaxAttempts ] = useState(6);
   const [ error, setError ] = useState('');
 
   useEffect(() => {
@@ -36,22 +36,22 @@ export const GameProvider = ({ children }) => {
   };
 
   const addLetter = (letter) => {
-    const newGuesses = guesses;
+    const newAttempts = attempts;
 
-    if (newGuesses[guessNo] && newGuesses[guessNo].length < wordLength) {
-      newGuesses[guessNo] += letter;
-    } else if (!newGuesses[guessNo]) {
-      newGuesses[guessNo] = letter;
+    if (newAttempts[attemptNo] && newAttempts[attemptNo].length < wordLength) {
+      newAttempts[attemptNo] += letter;
+    } else if (!newAttempts[attemptNo]) {
+      newAttempts[attemptNo] = letter;
     }
 
-    setGuesses([ ...newGuesses ]);
+    setAttempts([ ...newAttempts ]);
   };
 
   const values = {
     addLetter,
     answer,
-    guesses,
-    maxGuesses,
+    attempts,
+    maxAttempts,
     wordLength
   };
 
